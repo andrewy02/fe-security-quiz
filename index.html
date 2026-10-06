@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="극동대 해킹보안학과 학생을 위한 초급·중급·고급 15문항 보안 학습 퀴즈.">
+  <title>SECURITY LAB | 해킹보안 퀴즈</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23101b31%22%2F%3E%3Cpath%20d%3D%22M44%2019H25v13h15v13H20%22%20fill%3D%22none%22%20stroke%3D%22%23a4f16d%22%20stroke-width%3D%227%22%2F%3E%3Cpath%20d%3D%22M44%2048h10%22%20stroke%3D%22%23a4f16d%22%20stroke-width%3D%224%22%2F%3E%3C%2Fsvg%3E%0A" type="image/svg+xml">
+  <style>:root{color-scheme:dark;--bg:#0b1220;--panel:#111d31;--line:#29374c;--text:#f1f5fc;--muted:#a7b5ca;--green:#a4f16d;--cyan:#79d6ef;--purple:#c4acff;--red:#ffafb3;font-family:"Segoe UI","Malgun Gothic",sans-serif;font-size:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);line-height:1.65}button,a,input{-webkit-tap-highlight-color:transparent}button,input{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}a{color:var(--cyan)}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}button{transition:background .15s,transform .15s}button:hover:not(:disabled){transform:translateY(-2px)}.shell{max-width:1120px;margin:auto;padding:0 36px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:30px 0;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:13px;color:var(--text);font-weight:650;letter-spacing:.07em;text-decoration:none}.brand b{color:var(--green)}.brand-mark{background:var(--green);color:var(--bg);font-family:Consolas,monospace;font-size:24px;line-height:1;padding:12px 9px;border-radius:9px;font-weight:900}.brand-mark span{font-size:20px}.header-label{color:var(--muted);font-size:.875rem}main{padding:55px 0 62px;min-height:72vh}.eyebrow{font-family:Consolas,monospace;letter-spacing:.12em;color:var(--green);font-size:.875rem;margin:0 0 15px}.intro h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.28;margin:0 0 16px;letter-spacing:-.045em}.intro h1 em{color:var(--green);font-style:normal}.intro p{margin:0;color:var(--muted)}.intro-meta{display:flex;gap:24px;margin-top:25px;color:var(--muted);font-size:.875rem}.intro-meta b{color:var(--text);font-weight:600}.section-label{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:45px 0 17px}.section-label h2{font-size:1rem;margin:0}.section-label span{color:var(--muted);font-size:.875rem}.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.level{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:25px;display:flex;flex-direction:column;position:relative;overflow:hidden}.level-top{display:flex;align-items:center;justify-content:space-between;font-family:Consolas,monospace;font-size:.875rem;color:var(--accent);letter-spacing:.05em}.level-number{font-size:1.65rem;opacity:.65}.level h3{font-size:1.8rem;margin:22px 0 6px;line-height:1.3}.level p{font-size:.95rem;color:var(--muted);margin:0 0 23px}.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;margin-bottom:28px}.chip{font-size:.8125rem;color:#c5d0e1;background:#1b2940;border-radius:5px;padding:4px 8px}.level-bottom{display:flex;justify-content:space-between;gap:10px;font-size:.875rem;color:var(--muted);padding:14px 0;border-top:1px solid var(--line)}.primary,.secondary{padding:12px 20px;border:1px solid transparent;border-radius:8px;font-weight:650;line-height:1.5}.primary{background:var(--green);color:#132010}.level .primary{background:var(--accent);margin-top:9px;width:100%}.secondary{background:transparent;border-color:var(--line);color:var(--text)}.note{margin:23px 0 0;color:var(--muted);font-size:.875rem}.work-top{display:flex;justify-content:space-between;align-items:center;gap:15px}.work-top .secondary{font-size:.875rem}.quiz-wrap{max-width:780px;margin:auto}.quiz-meta{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:.875rem}.badge{color:var(--green);border:1px solid #4c683e;border-radius:6px;padding:3px 10px}.progress-row{display:flex;justify-content:space-between;gap:10px;font-size:.875rem;color:var(--muted);margin:30px 0 10px}progress{appearance:none;width:100%;height:6px;display:block;border:none;border-radius:10px;overflow:hidden;background:var(--line)}progress::-webkit-progress-bar{background:var(--line)}progress::-webkit-progress-value{background:var(--green)}progress::-moz-progress-bar{background:var(--green)}.question-card{margin-top:26px;background:var(--panel);border:1px solid var(--line);padding:30px;border-radius:16px}.question-card h1{font-size:1.55rem;line-height:1.55;letter-spacing:-.025em;margin:12px 0 27px}.topic{font-family:Consolas,"Malgun Gothic",sans-serif;color:var(--cyan);font-size:.875rem}.options{display:grid;gap:11px;border:0;padding:0;margin:0}.options legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.option{position:relative;display:flex;align-items:center;gap:13px;border:1px solid var(--line);border-radius:9px;padding:15px 16px;cursor:pointer;color:#d8e2ef;background:#142138;line-height:1.55}.option input{accent-color:var(--green);width:18px;height:18px;flex-shrink:0}.option.selected{border-color:var(--cyan);background:#182f42}.option.correct{border-color:var(--green);background:#20362c}.option.wrong{border-color:var(--red);background:#37252f}.answer-flag{font-size:.8125rem;margin-left:auto;flex-shrink:0;color:var(--green)}.wrong .answer-flag{color:var(--red)}.feedback{margin-top:22px;padding:19px;border-radius:9px;background:#172b26;border:1px solid #3d6349}.feedback.incorrect{background:#2c2430;border-color:#62434d}.feedback h2{font-size:1rem;margin:0 0 7px;color:var(--green)}.feedback.incorrect h2{color:var(--red)}.feedback p{margin:0;color:#d1dbea;font-size:.95rem}.feedback a,.review-card a{display:inline-block;font-size:.875rem;margin-top:12px}.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px;flex-wrap:wrap}.micro{color:var(--muted);font-size:.875rem;text-align:center;margin:16px 0}.result{text-align:center;padding:25px 0}.result h1{font-size:2.1rem;line-height:1.35;margin:12px 0}.score-ring{width:165px;height:165px;display:flex;flex-direction:column;justify-content:center;align-items:center;border:7px solid var(--green);border-radius:50%;margin:27px auto 19px}.score-ring strong{font-size:3.3rem;line-height:1.2;letter-spacing:-.04em}.score-ring span{color:var(--muted);font-size:.875rem}.result p{color:var(--muted);margin:7px 0}.result .actions{justify-content:center;margin:24px 0}.review-heading{font-size:1.1rem;margin:25px 0 14px}.review-card{border:1px solid var(--line);border-radius:12px;padding:22px;margin:12px 0;background:var(--panel)}.review-card summary{cursor:pointer;list-style-position:outside;margin-left:15px;font-weight:600}.review-card summary span{display:block;color:var(--green);font-size:.8125rem;margin-bottom:4px}.review-card.incorrect summary span{color:var(--red)}.review-content{border-top:1px solid var(--line);margin-top:15px;padding-top:15px}.review-content p{margin:6px 0;color:var(--muted);font-size:.95rem}.review-content .right-answer{color:var(--green)}.review-content .explanation{margin-top:15px;color:#d3deed}.exit-panel{margin:20px 0;padding:20px;border:1px solid var(--line);background:var(--panel);border-radius:12px}.exit-panel p{margin:0 0 15px}.exit-panel button{margin-right:8px}footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:.8125rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.skip{position:absolute;top:-80px;left:15px;z-index:3;background:var(--green);color:#132010;padding:10px}.skip:focus{top:10px}[hidden]{display:none!important}@media(max-width:760px){.shell{padding:0 20px}header{padding:20px 0}.brand{font-size:.875rem}.header-label{display:none}main{padding:35px 0 45px}.levels{grid-template-columns:1fr}.level{padding:22px}.level h3{margin-top:12px}.chips{margin-bottom:16px}.intro-meta{gap:15px;flex-wrap:wrap}.section-label{margin-top:32px}.question-card{padding:20px}.question-card h1{font-size:1.3rem}.option{padding:13px 12px;font-size:.95rem}.answer-flag{font-size:.75rem}.work-top{align-items:flex-start}.quiz-meta{flex-wrap:wrap}.result h1{font-size:1.7rem}}@media(prefers-reduced-motion:reduce){button{transition:none}button:hover:not(:disabled){transform:none}}
+</style>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <div class="shell">
+    <header><a class="brand" href="./index.html" aria-label="Security Lab 처음 화면"><span class="brand-mark">S<span>_</span></span><span>SECURITY <b>LAB</b></span></a><span class="header-label">해킹보안 퀴즈</span></header>
+    <main id="main" tabindex="-1"></main>
+    <footer><span>극동대 해킹보안학과 학생을 위한 개인 학습 프로젝트</span><span>학교 공식 서비스가 아닙니다.</span></footer>
+  </div>
+  <noscript>퀴즈를 풀려면 브라우저에서 JavaScript를 활성화해 주세요.</noscript>
+<script id="questions-source">
+(function (root) {
+  const source = (title, url) => ({ title, url });
+  const owasp = (slug) => source('OWASP 학습 자료', 'https://cheatsheetseries.owasp.org/cheatsheets/' + slug + '_Cheat_Sheet.html');
+  const levels = [
+    { id: 'beginner', label: '초급', en: 'FOUNDATIONS', number: '01', description: '보안의 기본 개념부터 차근차근.', topics: ['보안 3요소', '피싱', '인증'], time: '약 3분', questions: [
+      { id: 'b1', topic: '보안 3요소', question: '정보보안의 3요소인 CIA에 해당하지 않는 것은?', options: ['기밀성 (Confidentiality)', '무결성 (Integrity)', '가용성 (Availability)', '익명성 (Anonymity)'], answer: 3, explanation: 'CIA는 기밀성·무결성·가용성입니다. 기밀성은 허가된 사람만 정보에 접근하도록 하고, 무결성은 정보의 부적절한 변경을 막으며, 가용성은 필요할 때 정보와 서비스를 사용할 수 있도록 합니다.' },
+      { id: 'b2', topic: '피싱 대응', question: '“계정이 곧 정지됩니다”라는 이메일에 로그인 링크가 있습니다. 가장 적절한 행동은?', options: ['링크를 눌러 비밀번호를 입력한다', '공식 앱이나 직접 입력한 공식 주소에서 알림을 확인한다', '발신자 이름이 학교라면 링크를 신뢰한다', '메일에 비밀번호를 답장한다'], answer: 1, explanation: '긴급한 행동을 요구하는 메시지는 피싱일 수 있습니다. 발신자 표시 이름만으로 신뢰하지 말고, 공식 앱이나 직접 입력한 공식 사이트에서 사실을 확인하세요.' },
+      { id: 'b3', topic: '다중요소 인증', question: '서로 다른 인증 요소를 사용하는 다중요소 인증(MFA)의 예는?', options: ['비밀번호와 보안 질문', '비밀번호를 두 번 입력하기', '비밀번호와 인증 앱의 일회용 코드', 'PIN과 또 다른 PIN'], answer: 2, explanation: '비밀번호는 “알고 있는 것”, 인증 앱이 있는 기기는 “가지고 있는 것”에 해당합니다. 두 비밀번호나 보안 질문을 조합하는 것은 같은 지식 요소를 반복하는 것입니다.', source: owasp('Multifactor_Authentication') },
+      { id: 'b4', topic: '해시와 암호화', question: '해시와 암호화의 차이에 대한 설명으로 가장 적절한 것은?', options: ['해시는 보통 키로 복호화해 원문을 되찾는 방식이 아니다', '해시는 언제나 원문을 그대로 저장한다', '암호화는 키가 있어도 원문 복원이 불가능하다', '모든 해시 함수는 비밀번호 저장에 똑같이 적합하다'], answer: 0, explanation: '암호화는 적절한 키로 복호화할 수 있지만, 해시는 일반적으로 복호화 기능이 없는 단방향 변환입니다. 다만 추측 공격은 가능하므로 비밀번호에는 솔트와 Argon2id 같은 전용 비밀번호 해시를 사용해야 합니다.', source: owasp('Password_Storage') },
+      { id: 'b5', topic: '보안 윤리', question: '학교 시스템의 보안 점검을 시작하기 전에 가장 먼저 해야 할 일은?', options: ['인터넷에 결과를 공개한다', '관리자 비밀번호를 추측한다', '친구가 허락하면 학교 서버를 점검한다', '시스템 소유자의 명시적 허가와 점검 범위를 확인한다'], answer: 3, explanation: '보안 점검에는 시스템 소유자의 명시적인 허가가 필요합니다. 대상·기간·허용된 방법·보고 절차 등 합의된 범위 안에서 진행해야 합니다. 학생이라는 사실만으로 점검 권한이 생기지는 않습니다.' }
+    ] },
+    { id: 'intermediate', label: '중급', en: 'WEB & NETWORK', number: '02', description: '웹과 네트워크의 방어 원리 익히기.', topics: ['SQL 삽입', 'XSS', 'TLS'], time: '약 5분', questions: [
+      { id: 'm1', topic: 'SQL 삽입 방어', question: '사용자 입력이 포함된 데이터베이스 조회에서 SQL 삽입을 막는 핵심 방법은?', options: ['작은따옴표만 삭제한다', '입력값을 SQL 문자열 뒤에 붙인다', '매개변수화된 쿼리로 코드와 입력 데이터를 분리한다', '오류 메시지만 숨긴다'], answer: 2, explanation: '매개변수화된 쿼리(준비된 문장)는 SQL 구조를 먼저 정의하고 입력을 데이터로 전달합니다. 문자열 연결이나 특정 문자 삭제만으로는 안전한 방어가 되지 않습니다.', source: owasp('SQL_Injection_Prevention') },
+      { id: 'm2', topic: 'XSS 방어', question: '댓글을 일반 텍스트로 표시할 때 XSS를 예방하는 가장 적절한 방식은?', options: ['사용자 문자열을 innerHTML에 바로 넣는다', 'textContent 같은 안전한 출력 방식을 사용한다', '입력 길이만 제한한다', '브라우저 경고를 끈다'], answer: 1, explanation: '일반 텍스트는 textContent처럼 HTML로 해석하지 않는 방식으로 표시해야 합니다. 출력 문맥에 맞는 인코딩이 중요하며, HTML 입력을 꼭 허용해야 한다면 검증된 정화 도구를 사용해야 합니다.', source: owasp('Cross_Site_Scripting_Prevention') },
+      { id: 'm3', topic: 'CSRF 방어', question: '쿠키 기반 로그인 서비스에서 송금 요청의 CSRF 위험을 줄이는 적절한 조합은?', options: ['POST 요청이면 무조건 신뢰한다', '버튼을 화면에서 숨긴다', '로그인 쿠키의 유효기간만 늘린다', '서버가 CSRF 토큰을 검증하고 SameSite 쿠키 정책을 적용한다'], answer: 3, explanation: '브라우저는 조건에 따라 쿠키를 자동 전송하므로 공격자가 원치 않는 요청을 유도할 수 있습니다. 서버의 CSRF 토큰 검증과 SameSite 쿠키 정책을 함께 사용하세요. SameSite만으로 모든 상황을 해결할 수는 없습니다.', source: owasp('Cross-Site_Request_Forgery_Prevention') },
+      { id: 'm4', topic: 'HTTPS / TLS', question: 'HTTPS에 대한 설명으로 올바른 것은?', options: ['통신을 보호하지만 웹사이트 자체의 모든 취약점을 제거하지는 않는다', 'HTTPS 사이트는 무조건 믿을 수 있는 운영자가 만든다', 'HTTPS를 쓰면 접근 권한 검사가 필요 없다', '서버의 비밀번호가 자동으로 안전하게 저장된다'], answer: 0, explanation: 'TLS는 전송 중 기밀성과 무결성을 보호하고 인증서를 통해 서버 인증을 지원합니다. 그러나 SQL 삽입, XSS, 잘못된 접근 제어 같은 애플리케이션 취약점까지 해결하지는 않습니다.', source: owasp('Transport_Layer_Security') },
+      { id: 'm5', topic: '최소 권한', question: '조회만 하는 웹 서비스의 데이터베이스 계정에 적절한 권한은?', options: ['모든 테이블 삭제 권한', '데이터베이스 관리자 권한', '필요한 테이블을 조회하는 최소한의 권한', '다른 서비스의 계정 관리 권한'], answer: 2, explanation: '최소 권한 원칙은 작업에 필요한 권한만 부여하는 것입니다. 조회 서비스에는 필요한 데이터의 조회 권한만 부여하여, 침해가 발생해도 변경·삭제 피해가 커지는 것을 줄입니다.', source: owasp('Database_Security') }
+    ] },
+    { id: 'advanced', label: '고급', en: 'DEFENSE IN DEPTH', number: '03', description: '상황을 분석하고 더 깊게 방어하기.', topics: ['경쟁 조건', 'SSRF', '접근 제어'], time: '약 7분', questions: [
+      { id: 'a1', topic: 'TOCTOU', question: '프로그램이 파일 권한을 검사한 뒤 파일을 열기 전에 다른 프로세스가 파일 대상을 바꿨습니다. 어떤 문제인가요?', options: ['패킷 손실', '검사와 사용 사이의 경쟁 조건 (TOCTOU)', '비밀번호 솔트 충돌', '인증서 만료'], answer: 1, explanation: 'TOCTOU(Time Of Check To Time Of Use)는 검사 시점과 사용 시점 사이에 상태가 변해 발생하는 경쟁 조건입니다. 상황에 맞는 원자적 연산이나 안전한 파일 핸들 사용으로 검사한 대상과 사용하는 대상이 일치하도록 설계해야 합니다.', source: source('MITRE CWE-367', 'https://cwe.mitre.org/data/definitions/367.html') },
+      { id: 'a2', topic: 'SSRF 방어', question: '서버가 사용자가 입력한 URL의 이미지를 다운로드합니다. SSRF 방어에 가장 적절한 접근은?', options: ['클라이언트에서만 URL 형식을 검사한다', '주소에 https가 포함되면 모두 허용한다', '응답 이미지의 크기만 제한한다', '허용 대상·실제 연결 IP·리디렉션을 검증하고 내부망 접근을 제한한다'], answer: 3, explanation: '서버가 대신 요청하는 기능은 내부 서비스 접근에 악용될 수 있습니다. 요구사항에 맞는 대상 검증과 네트워크 제한을 적용하고, DNS 해석 결과 및 리디렉션으로 검증이 우회되지 않도록 해야 합니다.', source: owasp('Server_Side_Request_Forgery_Prevention') },
+      { id: 'a3', topic: '순방향 비밀성', question: '일회성 키 교환으로 순방향 비밀성을 확보한 TLS 연결에서 서버 장기 개인키가 나중에 유출되면?', options: ['개인키만으로 과거에 기록된 세션을 바로 복호화할 수 없다', '과거와 미래의 모든 세션이 반드시 복호화된다', '인증서가 자동으로 영구 갱신된다', '서버의 접근 제어가 자동으로 복구된다'], answer: 0, explanation: '순방향 비밀성은 장기 키가 나중에 유출되어도 과거 세션 키를 보호하는 성질입니다. 일회성 (EC)DHE 키 교환과 세션 비밀의 안전한 관리가 전제이며, 현재 서버가 침해된 상황까지 모두 해결한다는 뜻은 아닙니다.', source: owasp('Transport_Layer_Security') },
+      { id: 'a4', topic: '객체 접근 제어', question: '로그인한 사용자가 주문 번호를 바꾸자 다른 사람의 주문을 읽을 수 있습니다. 핵심 개선책은?', options: ['주문 번호를 화면에서 숨긴다', '번호를 UUID로 바꾸기만 한다', '서버가 요청마다 해당 주문에 대한 사용자 권한을 확인한다', '로그인 여부만 다시 확인한다'], answer: 2, explanation: '이는 IDOR 등 객체 수준 접근 제어 실패입니다. 로그인 인증과 특정 주문에 대한 권한 검사는 별개입니다. UUID처럼 추측하기 어려운 식별자를 사용해도 서버의 객체별 권한 검사가 필수입니다.', source: owasp('Insecure_Direct_Object_Reference_Prevention') },
+      { id: 'a5', topic: '비밀번호 저장 설계', question: '사용자 비밀번호 데이터베이스가 유출됐을 때 오프라인 추측 공격의 비용을 높이는 적절한 설계는?', options: ['비밀번호를 Base64로 인코딩한다', '사용자마다 고유한 솔트와 조정된 비용의 Argon2id를 사용한다', '모든 사용자에게 같은 비밀번호를 지정한다', '빠른 일반 해시를 한 번만 적용한다'], answer: 1, explanation: '비밀번호 전용 해시는 메모리·연산 비용을 통해 추측 공격을 비싸게 만듭니다. 사용자별 고유 솔트는 같은 비밀번호가 같은 해시로 저장되는 것을 막습니다. 비용은 운영 환경에 맞춰 조정해야 하며, 솔트 자체가 비밀일 필요는 없습니다.', source: owasp('Password_Storage') }
+    ] }
+  ];
+  root.QUIZ_DATA = levels;
+  if (typeof module !== 'undefined' && module.exports) module.exports = levels;
+})(globalThis);
+
+</script>
+<script id="engine-source">
+(function (root) {
+  function summarize(questions, answers) {
+    const correct = questions.filter((q, i) => answers[i] === q.answer).length;
+    return { correct, total: questions.length, score: questions.length ? Math.round(correct / questions.length * 100) : 0, wrong: questions.filter((q, i) => answers[i] !== q.answer) };
+  }
+  root.QuizEngine = { summarize };
+  if (typeof module !== 'undefined' && module.exports) module.exports = root.QuizEngine;
+})(globalThis);
+
+</script>
+<script id="app-source">
+(() => {
+  'use strict';
+  const main = document.getElementById('main');
+  let state = null;
+  const esc = value => String(value).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+  const accents = ['var(--green)', 'var(--cyan)', 'var(--purple)'];
+  const sourceLink = q => q.source ? `<a href="${esc(q.source.url)}" target="_blank" rel="noopener noreferrer">${esc(q.source.title)} · 새 탭</a>` : '';
+  function focusHeading() { main.querySelector('h1')?.focus(); }
+  function home(focus = false) {
+    state = null;
+    main.innerHTML = `<section class="intro"><p class="eyebrow">FE / SECURITY QUIZ</p><h1>보안 지식,<br><em>어디까지 알고 있나요?</em></h1><p>문제를 풀고, 해설로 이해하고, 틀린 개념을 다시 확인하세요.</p><div class="intro-meta"><span><b>3단계</b> 난이도</span><span><b>15문항</b> 보안 개념</span><span><b>4지선다</b> 객관식</span></div></section><div class="section-label"><h2>도전할 난이도를 선택하세요</h2><span>단계별 5문항</span></div><div class="levels">${QUIZ_DATA.map((level, i) => `<article class="level" style="--accent:${accents[i]}"><div class="level-top"><span>${level.en}</span><span class="level-number">${level.number}</span></div><h3>${level.label}</h3><p>${level.description}</p><div class="chips">${level.topics.map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div><div class="level-bottom"><span>5문항 · 100점 만점</span><span>${level.time}</span></div><button class="primary" data-level="${level.id}">${level.label} 퀴즈 시작</button></article>`).join('')}</div><p class="note">시간 제한 없이 풉니다. 답을 제출하면 정답과 해설이 표시됩니다.</p>`;
+    main.querySelectorAll('[data-level]').forEach(b => b.addEventListener('click', () => start(b.dataset.level)));
+    if (focus) { main.querySelector('h1').tabIndex = -1; focusHeading(); }
+  }
+  function start(levelId, questions) {
+    const level = QUIZ_DATA.find(l => l.id === levelId);
+    state = { level, questions: questions || [...level.questions], index: 0, answers: [], selected: null, submitted: false, review: !!questions };
+    renderQuestion();
+  }
+  function renderQuestion() {
+    const q = state.questions[state.index];
+    main.innerHTML = `<div class="quiz-wrap"><div class="work-top"><div class="quiz-meta"><span class="badge">${state.level.label}</span><span>${state.review ? '오답 재도전' : state.level.en}</span></div><button id="exit" class="secondary">난이도 선택</button></div><div id="exit-slot"></div><div class="progress-row"><span>문항 ${state.index + 1} / ${state.questions.length}</span><span id="correct-count">${state.answers.filter((a,i) => a === state.questions[i].answer).length}문항 정답</span></div><progress value="${state.index}" max="${state.questions.length}" aria-label="제출한 문항 수"></progress><section class="question-card"><span class="topic">${esc(q.topic)}</span><h1 tabindex="-1">${esc(q.question)}</h1><fieldset class="options"><legend>정답을 하나 선택하세요</legend>${q.options.map((o,i) => `<label class="option"><input type="radio" name="answer" value="${i}"><span>${esc(o)}</span><span class="answer-flag"></span></label>`).join('')}</fieldset><div id="feedback" role="status" aria-live="polite"></div><div class="actions"><button id="submit" class="primary" disabled>정답 제출</button><button id="next" class="primary" hidden>${state.index === state.questions.length - 1 ? '결과 보기' : '다음 문항'}</button></div></section><p class="micro">${state.review ? '틀렸던 개념을 다시 확인해 보세요.' : '문항당 20점 · 제출한 답은 변경할 수 없습니다.'}</p></div>`;
+    main.querySelectorAll('input[name="answer"]').forEach(input => input.addEventListener('change', () => {
+      if (state.submitted) return;
+      state.selected = Number(input.value);
+      main.querySelectorAll('.option').forEach(l => l.classList.toggle('selected', l.contains(input)));
+      document.getElementById('submit').disabled = false;
+    }));
+    document.getElementById('submit').addEventListener('click', submit);
+    document.getElementById('next').addEventListener('click', () => {
+      if (!state.submitted) return;
+      if (state.index === state.questions.length - 1) return result();
+      state.index++; state.selected = null; state.submitted = false; renderQuestion();
+    });
+    document.getElementById('exit').addEventListener('click', confirmExit);
+    focusHeading();
+  }
+  function submit() {
+    if (state.submitted || state.selected === null) return;
+    const q = state.questions[state.index];
+    state.answers[state.index] = state.selected; state.submitted = true;
+    const correct = state.selected === q.answer;
+    main.querySelectorAll('.option').forEach((label,i) => {
+      label.querySelector('input').disabled = true;
+      if (i === q.answer) { label.classList.add('correct'); label.querySelector('.answer-flag').textContent = '정답'; }
+      else if (i === state.selected) { label.classList.add('wrong'); label.querySelector('.answer-flag').textContent = '내 선택'; }
+    });
+    document.getElementById('feedback').innerHTML = `<div class="feedback ${correct ? '' : 'incorrect'}"><h2>${correct ? '정답입니다!' : '다시 기억해 두세요.'}</h2><p>${esc(q.explanation)}</p>${sourceLink(q)}</div>`;
+    document.getElementById('correct-count').textContent = `${state.answers.filter((a,i) => a === state.questions[i].answer).length}문항 정답`;
+    main.querySelector('progress').value = state.index + 1;
+    document.getElementById('submit').hidden = true;
+    document.getElementById('next').hidden = false;
+    document.getElementById('next').focus();
+  }
+  function confirmExit() {
+    const slot = document.getElementById('exit-slot');
+    if (slot.firstChild) return;
+    slot.innerHTML = '<div class="exit-panel" role="group" aria-label="퀴즈 종료 확인"><p>난이도 선택으로 돌아가면 현재 풀이 기록이 사라집니다.</p><button id="continue" class="primary">계속 풀기</button><button id="leave" class="secondary">돌아가기</button></div>';
+    document.getElementById('continue').addEventListener('click', () => { slot.innerHTML = ''; document.getElementById('exit').focus(); });
+    document.getElementById('leave').addEventListener('click', () => home(true));
+    document.getElementById('continue').focus();
+  }
+  function result() {
+    const report = QuizEngine.summarize(state.questions, state.answers);
+    const message = report.score === 100 ? '모든 문항을 맞혔어요. 다음 단계에도 도전해 보세요.' : report.score >= 60 ? '잘 풀었어요. 헷갈린 개념을 해설로 정리해 보세요.' : '한 걸음씩 익히면 됩니다. 해설을 읽고 다시 도전해 보세요.';
+    const levelIndex = QUIZ_DATA.findIndex(l => l.id === state.level.id);
+    main.innerHTML = `<div class="quiz-wrap"><section class="result"><p class="eyebrow">${state.level.label} / ${state.review ? '오답 재도전' : 'QUIZ COMPLETE'}</p><h1 tabindex="-1">${report.score === 100 ? '완벽하게 이해했어요!' : '오늘의 보안 점검 완료'}</h1><div class="score-ring"><strong>${report.score}<span>점</span></strong><span>100점 만점</span></div><p>${report.total}문항 중 ${report.correct}문항 정답 · 정답률 ${report.score}%</p><p>${message}</p><div class="actions">${report.wrong.length ? '<button id="retry-wrong" class="primary">오답만 다시 풀기</button>' : levelIndex < 2 ? '<button id="next-level" class="primary">다음 난이도 도전</button>' : ''}<button id="restart" class="secondary">같은 단계 다시 풀기</button><button id="home" class="secondary">난이도 선택</button></div></section><h2 class="review-heading">문항별 정답과 해설</h2>${state.questions.map((q,i) => `<details class="review-card ${state.answers[i] === q.answer ? '' : 'incorrect'}" ${state.answers[i] !== q.answer ? 'open' : ''}><summary><span>${state.answers[i] === q.answer ? '정답' : '오답'} · ${esc(q.topic)}</span>${i+1}. ${esc(q.question)}</summary><div class="review-content"><p>내 선택: ${esc(q.options[state.answers[i]])}</p><p class="right-answer">정답: ${esc(q.options[q.answer])}</p><p class="explanation">${esc(q.explanation)}</p>${sourceLink(q)}</div></details>`).join('')}</div>`;
+    const levelId = state.level.id;
+    document.getElementById('retry-wrong')?.addEventListener('click', () => start(levelId, report.wrong));
+    document.getElementById('next-level')?.addEventListener('click', () => start(QUIZ_DATA[levelIndex+1].id));
+    document.getElementById('restart').addEventListener('click', () => start(levelId));
+    document.getElementById('home').addEventListener('click', () => home(true));
+    focusHeading();
+  }
+  home();
+})();
+
+</script>
+</body>
+</html>
